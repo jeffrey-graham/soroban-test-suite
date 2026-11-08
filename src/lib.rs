@@ -13,6 +13,9 @@ pub mod time;
 
 /// Re-export commonly used types and traits
 pub mod prelude {
+    pub use crate::assertions::{
+        assert_event_emitted, assert_event_not_emitted, assert_events_ordered, ExpectedEvent,
+    };
     pub use crate::context::TestContext;
     pub use crate::error::TestError;
     pub use crate::fixtures::*;
